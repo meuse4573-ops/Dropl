@@ -1,0 +1,2 @@
+# Test file to verify Git push access
+Created by opencode to test GitHub push access
