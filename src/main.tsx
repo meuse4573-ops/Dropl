@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Auth from './pages/Auth';
-import App from './App';
+import App, { Dashboard } from './App';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -16,7 +16,7 @@ createRoot(document.getElementById('root')!).render(
         }} />} />
         <Route path="/login" element={<Auth initialMode="login" onBack={() => window.location.href = '/'} />} />
         <Route path="/signup" element={<Auth initialMode="signup" onBack={() => window.location.href = '/'} />} />
-        <Route path="/dashboard" element={<App.Dashboard onLogout={() => window.location.href = '/'} />} />
+        <Route path="/dashboard" element={<Dashboard onLogout={() => window.location.href = '/'} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
